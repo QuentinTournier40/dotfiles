@@ -1,0 +1,89 @@
+format = """\
+[](bg:#030B16 fg:#7DF9AA)\
+$os\
+[](fg:#7DF9AA bg:#1C3A5E)\
+$time\
+[](fg:#1C3A5E bg:#1859B4)\
+$directory\
+[](fg:#1859B4 bg:#B1EDE8)\
+$git_branch\
+$git_status\
+$git_metrics\
+[](fg:#B1EDE8 bg:#030B16)\
+$line_break$character\
+"""
+
+[directory]
+format = "[   $path ]($style)"
+style = "fg:#F0F7F4 bg:#1859B4"
+
+[git_branch]
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+symbol = " "
+style = "fg:#1C3A5E bg:#B1EDE8"
+
+[git_status]
+format = '[$all_status]($style)'
+style = "fg:#1C3A5E bg:#B1EDE8"
+
+[git_metrics]
+format = "([+$added]($added_style))[]($added_style)"
+added_style = "fg:#1C3A5E bg:#B1EDE8"
+deleted_style = "fg:bright-red bg:235"
+disabled = false
+
+[character]
+success_symbol = '[ ➜](#7DF9AA)'
+error_symbol = '[ ✗](#E84D44)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#1d2230"
+format = '[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)'
+
+[os]
+format = '[$symbol]($style)'
+style = "bg:#7DF9AA fg:#090c0c"
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
