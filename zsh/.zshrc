@@ -49,11 +49,9 @@ alias egrep='egrep --color=auto'
 
 alias rm='rm -i'
 
-alias k='kubectl'
 alias ka='kubectl apply -f'
 alias kex='kubectl exec -i -t'
-alias kg='kubectl get'
-alias kga='kubectl get all'
+alias kname='kubectl config set-context --current --namespace'
 
 alias gs='git status'
 alias gd='git diff'
