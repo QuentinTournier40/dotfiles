@@ -1,0 +1,110 @@
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+
+set scrolloff=5
+set incsearch
+set hlsearch
+nnoremap <Esc> :nohlsearch<CR>
+set smartcase
+set ideajoin
+set ignorecase
+set clipboard^=unnamed,unnamedplus
+set matchpairs+=<:>
+
+let mapleader = " "
+
+" Config
+noremap <Leader>cc :edit ~/.ideavimrc<Cr>
+noremap <Leader>cs :source ~/.ideavimrc<Cr>:nohlsearch<Cr>
+
+" Navigation
+inoremap kj <Esc>
+" Redo
+noremap U <C-r>
+" Black hole register
+noremap \ "_
+" Paste over currently selected text without yanking it
+xnoremap p P
+
+" consider camelCase and snake_case words when jumping between words
+map w [w
+map e ]w
+map b [b
+map ge ]b
+
+" Split windows
+map <A-j> <C-w>j
+map <A-k> <C-w>k
+map <A-h> <C-w>h
+map <A-l> <C-w>l
+
+map <Leader>wv <Action>(SplitVertically)
+map <Leader>wh <Action>(SplitHorizontally)
+map <Leader>ww <Action>(Unsplit)
+map <Leader>wa <Action>(UnsplitAll)
+
+" Goto
+map <Leader>sc <Action>(GotoClass)
+map <Leader>sf <Action>(GotoFile)
+map <Leader>ss <Action>(GotoSymbol)
+map <Leader>sa <Action>(GotoAction)
+
+map <Leader>gd <Action>(GotoDeclaration)
+map <Leader>gy <Action>(GotoTypeDeclaration)
+map <Leader>gi <Action>(GotoImplementation)
+map <Leader>gt <Action>(GotoTest)
+map <Leader>gy <Action>(GotoTypeDeclaration)
+map <Leader>gm <Action>(GotoSuperMethod)
+
+" Navigation
+map <C-;> <Action>(RecentFiles)
+map <A-u> <Action>(MethodUp)
+map <A-d> <Action>(MethodDown)
+
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
+
+" Usages
+map <Leader>uu <Action>(ShowUsages)
+map <Leader>hi <Action>(ShowHoverInfo)
+
+" Find and Replace
+map <S-f> <Action>(Find)
+map <S-r> <Action>(Replace)
+map <Leader>ff <Action>(FindInPath)
+map <Leader>fr <Action>(ReplaceInPath)
+
+" Refactoring
+map <Leader>rn <Action>(RenameElement)
+map <Leader>rm <Action>(ExtractMethod)
+map <Leader>rv <Action>(IntroduceVariable)
+map <Leader>rf <Action>(IntroduceField)
+map <Leader>rs <Action>(ChangeSignature)
+map <Leader>rr <Action>(Refactorings.QuickListPopupAction)
+map <Leader>aa <Action>(ShowIntentionActions)
+map <Leader>sw <Action>(SurroundWith)
+map <S-space> <Action>(Generate)
+map <S-k> <Action>(EditorDuplicateLines)
+
+" Errors
+map <Leader>en <Action>(GotoNextError)
+map <Leader>ep <Action>(GotoPreviousError)
+
+" Formatting
+map <Leader><Leader> <Action>(ReformatCode)
+map <Leader>oi <Action>(OptimizeImports)
+map <C-j> <Action>(MoveLineDown)
+map <C-k> <Action>(MoveLineUp)
+map <C-i> <Action>(MoveStatementDown)
+map <C-o> <Action>(MoveStatementUp)
+
+" Files
+map <Leader>qq <Action>(CloseContent)
+map <Leader>qa <Action>(CloseAllEditors)
+map <Leader>nf <Action>(NewFile)
+map <Leader>nd <Action>(NewDirectory)
+map <Leader>nc <Action>(NewClass)
+map <Leader>re <Action>(RenameFile)
+
+" Terminal
+map <C-t> <Action>(ActivateTerminalToolWindow)
