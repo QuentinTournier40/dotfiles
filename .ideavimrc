@@ -2,6 +2,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 
 set scrolloff=5
+set number relativenumber
 set incsearch
 set hlsearch
 nnoremap <Esc> :nohlsearch<CR>
@@ -10,6 +11,7 @@ set ideajoin
 set ignorecase
 set clipboard^=unnamed,unnamedplus
 set matchpairs+=<:>
+set NERDTree
 
 let mapleader = " "
 
@@ -101,10 +103,6 @@ map <C-o> <Action>(MoveStatementUp)
 " Files
 map <Leader>qq <Action>(CloseContent)
 map <Leader>qa <Action>(CloseAllEditors)
-map <Leader>nf <Action>(NewFile)
-map <Leader>nd <Action>(NewDirectory)
-map <Leader>nc <Action>(NewClass)
-map <Leader>re <Action>(RenameFile)
 
 " Terminal
 map <C-t> <Action>(ActivateTerminalToolWindow)
